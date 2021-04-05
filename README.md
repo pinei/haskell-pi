@@ -18,7 +18,9 @@ And chose `balenalib/aarch64-debian:bullseye`
 
 Balenalib is a popular repository for IoT images
 
-The resolver for GCH 8.8.4 is [LTS Haskell 16.31](https://www.stackage.org/lts-16.31) published on 2021-01-17
+The `stack` resolver for GHC 8.8.4 is [LTS Haskell 16.31](https://www.stackage.org/lts-16.31) published on 2021-01-17
+
+This tool doesn't support ARM binaries, so it is configured in the image to always use the system GHC.
 
 ## How to start with a new project
 
@@ -35,7 +37,7 @@ Create a project with `stack`
 Downloading template "new-template" to create project "haskell-for-good" in haskell-for-good/ ...
 ```
 
-I think you can ignore `--resolver` because `stack` will not try to get another GCH (stack doesn't support ARM binaries).
+I think you can ignore `--resolver` because `stack` will not try to get another GHC.
 
 Test the project
 
