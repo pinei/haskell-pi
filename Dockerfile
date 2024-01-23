@@ -3,7 +3,9 @@ FROM balenalib/aarch64-debian:bullseye
 RUN install_packages cabal-install
 RUN install_packages haskell-stack
 
+# The resolver for GHC 8.8.4
 ARG resolver_version=lts-16.31
+
 ARG stack_path=/root/.stack
 
 WORKDIR /root
